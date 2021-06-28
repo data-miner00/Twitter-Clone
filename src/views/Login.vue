@@ -1,0 +1,15 @@
+<template>
+  <div class="login"></div>
+</template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  data: () => ({
+    input_acc: "",
+    input_password: "",
+  }),
+});
+</script>
+
+<style lang="sass" scoped></style>

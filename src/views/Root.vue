@@ -12,13 +12,13 @@
           <div class="root__content__show__subtitle">Join Finicky today.</div>
           <div class="root__content__show__actions">
             <router-link
-              to="/"
+              to="/register"
               class="root__content__show__actions__action register"
             >
               <div>Register</div>
             </router-link>
             <router-link
-              to="/"
+              to="/login"
               class="root__content__show__actions__action login"
             >
               <div>Login</div>

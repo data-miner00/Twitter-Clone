@@ -48,6 +48,10 @@ export default Vue.extend({
 <style lang="sass" scoped>
 @import "../assets/sass/_variables"
 .login
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
   &__content
     padding: 0 20px
     max-width: 400px

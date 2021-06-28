@@ -4,7 +4,7 @@ import VueI18n from "vue-i18n";
 Vue.use(VueI18n);
 
 // var language = (window.navigator.userLanguage || window.navigator.language.substring(0,2))
-const language = "ja";
+const language = "en";
 let selection = "";
 
 if (language) {

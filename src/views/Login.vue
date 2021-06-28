@@ -73,11 +73,13 @@ export default Vue.extend({
       div
         border: 1px solid rgb(207, 217, 222)
         border-radius: 5px
-        padding: 20px 5px
+        overflow: hidden
+
         input
           font-size: 1em
           border: none
           outline: none
+          padding: 20px 5px
     &__login-button
       padding: 11px
       button

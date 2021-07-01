@@ -13,7 +13,11 @@
           :to="navLink.to"
         />
       </div>
-      <div class="sidebar__top__tweet"></div>
+      <div class="sidebar__top__tweet">
+        <div>
+          <span>Tweet</span>
+        </div>
+      </div>
     </div>
     <div class="sidebar__bottom"></div>
   </div>
@@ -89,4 +93,19 @@ export default Vue.extend({
       width: 48px
       justify-content: center
       align-items: center
+    &__tweet
+      width: 90%
+      border-radius: 250px
+      background-color: rgb(121, 75, 196)
+      color: white
+      font-weight: 700
+      margin: 16px 0
+      display: flex
+      height: 48px
+      justify-content: center
+      align-items: center
+      transition: background 0.2s
+      cursor: pointer
+      &:hover
+        background: rgb(134, 93, 202)
 </style>

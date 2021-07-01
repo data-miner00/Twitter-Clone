@@ -2,8 +2,7 @@
   <div class="user-layout">
     <!-- Header -->
     <header class="user-layout__header">
-      <div></div>
-      <div>hi</div>
+      <Sidebar />
     </header>
 
     <main class="user-layout__main">
@@ -19,10 +18,12 @@
 <script lang="ts">
 import Vue from "vue";
 import Topbar from "../components/Topbar.vue";
+import Sidebar from "../components/Sidebar/index.vue";
 
 export default Vue.extend({
   components: {
     Topbar,
+    Sidebar,
   },
 });
 </script>
@@ -35,7 +36,7 @@ export default Vue.extend({
     flex-grow: 1
     display: flex
     z-index: 3
-    align-items: flex-end
+    justify-content: flex-end
 
   &__main
     display: flex

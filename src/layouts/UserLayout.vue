@@ -1,7 +1,18 @@
 <template>
   <div class="user-layout">
-    <Topbar />
-    <router-view />
+    <!-- Header -->
+    <header class="user-layout__header">
+      <div></div>
+      <div>hi</div>
+    </header>
+
+    <main class="user-layout__main">
+      <div class="user-layout__main__wall">
+        <Topbar />
+        <router-view />
+      </div>
+      <div class="user-layout__main__sidewall"></div>
+    </main>
   </div>
 </template>
 
@@ -19,4 +30,24 @@ export default Vue.extend({
 <style lang="sass" scoped>
 .user-layout
   position: relative
+  display: flex
+  &__header
+    flex-grow: 1
+    display: flex
+    z-index: 3
+    align-items: flex-end
+
+  &__main
+    display: flex
+    justify-content: space-between
+    height: 100vh
+    flex-shrink: 1
+    flex-grow: 1
+    align-items: flex-start
+    &__wall
+      max-width: 600px
+      background: #eee
+    &__sidewall
+      width: 290px
+      background: #eee
 </style>

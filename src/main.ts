@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import VueI18n from "vue-i18n";
 import i18n from "./i18n";
+import "./plugins/fontAwesome";
 
 Vue.use(VueI18n);
 

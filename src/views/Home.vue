@@ -1,19 +1,24 @@
 <template>
   <div class="home">
-    <PostItem />
+    <!-- <PostItem /> -->
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import PostItem from "../components/PostItem.vue";
+// import PostItem from "../components/PostItem.vue";
 
 export default Vue.extend({
   name: "Home",
   components: {
-    PostItem,
+    // PostItem,
   },
 });
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.home
+  background: #eee
+  width: 600px
+  height: 100vh
+</style>

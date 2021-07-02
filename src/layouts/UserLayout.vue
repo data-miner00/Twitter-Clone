@@ -37,6 +37,7 @@ export default Vue.extend({
     display: flex
     z-index: 3
     justify-content: flex-end
+    border-right: 1px solid #eee
 
   &__main
     display: flex
@@ -47,7 +48,7 @@ export default Vue.extend({
     align-items: flex-start
     &__wall
       max-width: 600px
-      background: #eee
+      border-right: 1px solid #eee
     &__sidewall
       width: 290px
       background: #eee

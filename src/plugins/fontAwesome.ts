@@ -14,6 +14,8 @@ import {
   faBookmark,
   faStickyNote,
   faUser,
+  faHandHoldingHeart,
+  faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faComment as farComment,
@@ -23,6 +25,9 @@ import {
   faBookmark as farBookmark,
   faStickyNote as farStickyNote,
   faUser as farUser,
+  faImage as farImage,
+  faSmile as farSmile,
+  faCalendarAlt as farCalendarAlt,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import Vue from "vue";
@@ -48,7 +53,12 @@ library.add(
   faStickyNote,
   farStickyNote,
   faUser,
-  farUser
+  farUser,
+  farImage,
+  faHandHoldingHeart,
+  faChartLine,
+  farSmile,
+  farCalendarAlt
 );
 
 Vue.component("Fa", FontAwesomeIcon);

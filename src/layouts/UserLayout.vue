@@ -46,6 +46,7 @@ export default Vue.extend({
     flex-shrink: 1
     flex-grow: 1
     align-items: flex-start
+    width: 990px
     &__wall
       max-width: 600px
       border-right: 1px solid #eee

@@ -39,6 +39,7 @@ export default Vue.extend({
     align-items: center
     border-radius: 999px
     flex-shrink: 1
+    transition: background 0.2s
 
     &.active
       color: rgb(121, 75, 196)

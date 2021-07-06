@@ -6,7 +6,4 @@
 
 <style lang="sass">
 @import "./assets/sass/global"
-
-#app
-  overflow: hidden
 </style>

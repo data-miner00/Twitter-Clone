@@ -85,6 +85,8 @@ export default Vue.extend({
 .sidebar
   padding: 0 12px
   width: 275px
+  position: sticky
+  top: 0
   // min-width: 88px
   &__top
     &__logo

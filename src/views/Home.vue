@@ -41,18 +41,26 @@
       </div>
     </div>
     <div class="primary-seperator"></div>
-    <!-- <PostItem /> -->
+    <div class="home__post-section">
+      <PostItem />
+      <PostItem />
+      <PostItem />
+      <PostItem />
+      <PostItem />
+      <PostItem />
+      <PostItem />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-// import PostItem from "../components/PostItem.vue";
+import PostItem from "../components/PostItem.vue";
 
 export default Vue.extend({
   name: "Home",
   components: {
-    // PostItem,
+    PostItem,
   },
 });
 </script>
@@ -60,7 +68,7 @@ export default Vue.extend({
 <style lang="sass" scoped>
 .home
   width: 600px
-  height: 100vh
+  min-height: 100vh
   &__write-status
     padding: 4px 0 8px
     border-bottom: 1px solid #eee

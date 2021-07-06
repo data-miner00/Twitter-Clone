@@ -119,7 +119,7 @@ export default Vue.extend({
                 background: rgba(121,75,196, 0.1)
 
               div
-                color: rgb(122, 75, 196)
+                color: rgb(121, 75, 196)
           .actions__right
             background: rgba(121,75,196,0.5)
             border-radius: 999px

@@ -46,6 +46,9 @@
               quasi ab.
             </div>
           </div>
+          <div class="post__container__content__right__image">
+            <div></div>
+          </div>
           <div class="post__container__content__right__actions">
             <div class="comment">
               <div class="icon">
@@ -81,10 +84,31 @@
   </article>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  props: {
+    name: String,
+    username: String,
+    postedAt: String,
+    imageUrl: String,
+    commentCount: Number,
+    retweetCount: Number,
+    loveCount: Number,
+    actionDone: String,
+    actionIcon: String,
+  },
+});
+</script>
+
 <style lang="sass" scoped>
 .post
   padding: 0 16px
   border-bottom: 1px solid #eee
+  transition: background 0.2s
+  cursor: pointer
+  &:hover
+    background: rgba(0, 0, 0, 0.03)
   &__container
     &__action-done
       padding-top: 12px
@@ -152,12 +176,25 @@
 
             line-height: 20px
             overflow-wrap: break-word
+        &__image
+          margin-top: 12px
+          div
+            border-radius: 15px
+            border: 1px solid #eee
+            background: url("http://localhost:8080/referpic.jpg")
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            padding-top: 52.3333%
+            width: 100%
+
         &__actions
           margin-top: 12px
           display: flex
           justify-content: space-between
           color: rgb(83, 100, 113)
           line-height: 20px
+          max-width: 425px
           div
             width: fit-content
             display: flex
@@ -165,5 +202,6 @@
             font-size: 18px
 
           .numbers
+            font-size: 13px
             padding: 0 12px
 </style>

@@ -28,6 +28,7 @@ import {
   faImage as farImage,
   faSmile as farSmile,
   faCalendarAlt as farCalendarAlt,
+  faSun as farSun,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import Vue from "vue";
@@ -58,7 +59,8 @@ library.add(
   faHandHoldingHeart,
   faChartLine,
   farSmile,
-  farCalendarAlt
+  farCalendarAlt,
+  farSun
 );
 
 Vue.component("Fa", FontAwesomeIcon);

@@ -2,7 +2,9 @@
   <div class="user-layout">
     <!-- Header -->
     <header class="user-layout__header">
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
     </header>
 
     <main class="user-layout__main">
@@ -30,7 +32,6 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
 .user-layout
-  position: relative
   display: flex
   &__header
     flex-grow: 1
@@ -42,13 +43,14 @@ export default Vue.extend({
   &__main
     display: flex
     justify-content: space-between
-    height: 100vh
+    min-height: 100vh
     flex-shrink: 1
     flex-grow: 1
     align-items: flex-start
     width: 990px
     &__wall
       max-width: 600px
+      min-height: 100%
       border-right: 1px solid #eee
     &__sidewall
       width: 290px

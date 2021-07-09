@@ -11,6 +11,7 @@
           :linkTitle="navLink.link"
           :icon="navLink.icon"
           :to="navLink.to"
+          :active="navLink.active"
         />
       </div>
       <div class="sidebar__top__tweet">
@@ -38,41 +39,49 @@ export default Vue.extend({
           link: "Home",
           icon: "igloo",
           to: "/s",
+          active: true,
         },
         {
           link: "Explore",
           icon: "hashtag",
           to: "/s",
+          active: false,
         },
         {
           link: "Notifications",
           icon: "bell",
           to: "/s",
+          active: false,
         },
         {
           link: "Messages",
           icon: "envelope",
           to: "/s",
+          active: false,
         },
         {
           link: "Bookmarks",
           icon: "bookmark",
           to: "/s",
+          active: false,
         },
         {
           link: "Lists",
           icon: "sticky-note",
           to: "/s",
+          active: false,
         },
         {
           link: "Profile",
           icon: "user",
           to: "/s",
+          active: false,
         },
         {
           link: "More",
           icon: "ellipsis-h",
           to: "/s",
+          active: false,
         },
       ];
     },

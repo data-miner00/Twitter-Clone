@@ -13,7 +13,9 @@
           <Topbar />
           <router-view />
         </div>
-        <div class="user-layout__main__sidewall"></div>
+        <div class="user-layout__main__sidewall">
+          <Sidewall />
+        </div>
       </div>
     </main>
   </div>
@@ -23,11 +25,13 @@
 import Vue from "vue";
 import Topbar from "../components/Topbar.vue";
 import Sidebar from "../components/Sidebar/index.vue";
+import Sidewall from "../components/Sidewall/index.vue";
 
 export default Vue.extend({
   components: {
     Topbar,
     Sidebar,
+    Sidewall,
   },
 });
 </script>
@@ -59,6 +63,5 @@ export default Vue.extend({
       box-sizing: content-box
     &__sidewall
       width: 350px
-      background: #eee
       min-height: 1248px
 </style>

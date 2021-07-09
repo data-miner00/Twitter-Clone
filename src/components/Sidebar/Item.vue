@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <div class="item__wrapper">
+    <div class="item__wrapper" :class="{ active: active }">
       <div class="item__wrapper__icon">
         <fa :icon="icon" />
       </div>
@@ -20,6 +20,7 @@ export default Vue.extend({
     linkTitle: String,
     icon: String,
     to: String,
+    active: Boolean,
   },
 });
 </script>
@@ -32,14 +33,15 @@ export default Vue.extend({
   cursor: pointer
   &:hover &__wrapper
     background: rgba(121, 75, 196, 0.1)
+    color: rgb(121, 75, 196)
   &__wrapper
     display: flex
     padding: 12px
-    color: rgb(121, 75, 196)
+
     align-items: center
     border-radius: 999px
     flex-shrink: 1
-    transition: background 0.2s
+    transition: background 0.2s, color .2s
 
     &.active
       color: rgb(121, 75, 196)

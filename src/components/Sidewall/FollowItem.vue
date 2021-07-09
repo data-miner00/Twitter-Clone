@@ -33,6 +33,10 @@ export default Vue.extend({
   padding: 12px 16px
   display: flex
   border-bottom: 1px solid rgb(239, 243, 244)
+  transition: background .2s
+  cursor: pointer
+  &:hover
+    background: rgba(0, 0, 0, 0.03)
   &__avatar
     height: 48px
     width: 48px
@@ -60,12 +64,15 @@ export default Vue.extend({
         min-height: 32px
         min-width: 79px
         border-radius: 250px
-        border: 2px solid rgb(121, 75, 196)
+        border: 1px solid rgb(121, 75, 196)
         color: rgb(121, 75, 196)
         display: flex
         justify-content: center
         align-items: center
         font-weight: 700
+        transition: background .2s
+        &:hover
+          background: rgba(121, 75, 196, .1)
         div
           width: fit-content
 </style>

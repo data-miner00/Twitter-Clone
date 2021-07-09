@@ -20,17 +20,21 @@
         </div>
       </div>
     </div>
-    <div class="sidebar__bottom"></div>
+    <div class="sidebar__bottom">
+      <UserPanel />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Item from "./Item.vue";
+import UserPanel from "./UserPanel.vue";
 
 export default Vue.extend({
   components: {
     Item,
+    UserPanel,
   },
   computed: {
     navLinks() {
@@ -96,6 +100,10 @@ export default Vue.extend({
   width: 275px
   position: sticky
   top: 0
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   // min-width: 88px
   &__top
     &__logo
@@ -119,4 +127,6 @@ export default Vue.extend({
       cursor: pointer
       &:hover
         background: rgb(134, 93, 202)
+  &__bottom
+    margin-top: auto
 </style>

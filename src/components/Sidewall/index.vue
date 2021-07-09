@@ -1,5 +1,6 @@
 <template>
   <div class="sidewall">
+    <div class="sidewall__dummy"></div>
     <div class="sidewall__wrap">
       <div class="sidewall__search-box">
         <div class="sidewall__search-box__search-icon">
@@ -12,23 +13,34 @@
         </div>
       </div>
     </div>
-    <div class="sidewall__trends"></div>
+    <div class="sidewall__trends">
+      <SectionTitle text="Trends for you" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({});
+import SectionTitle from "./SectionTitle.vue";
+
+export default Vue.extend({
+  components: {
+    SectionTitle,
+  },
+});
 </script>
 
 <style lang="sass" scoped>
 .sidewall
+  &__dummy
+    height: 53px
   &__wrap
     padding: 4px 0px 2px 0
     position: fixed
     top: 0
     height: 53px
     width: 350px
+    background: white
   &__search-box
     display: flex
     background: rgb(239, 243, 244)
@@ -55,4 +67,8 @@ export default Vue.extend({});
         padding: 12px
         border: none
         width: 100%
+  &__trends
+    border-radius: 16px
+    background: #f7f9f9
+    height: 200px
 </style>

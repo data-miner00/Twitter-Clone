@@ -36,6 +36,7 @@ export default Vue.extend({
   justify-content: space-between
   cursor: pointer
   transition: background .2s
+  border-bottom: 1px solid rgb(239, 243, 244)
   &:hover
     background: rgba(0, 0, 0, 0.03)
   &__left

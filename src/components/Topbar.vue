@@ -6,7 +6,7 @@
         <div>Home</div>
       </div>
       <div class="topbar--regular__icon">
-        <fa :icon="['far', 'sun']" />
+        <fa :icon="['fas', 'air-freshener']" />
       </div>
     </div>
   </div>

@@ -17,6 +17,7 @@ import {
   faHandHoldingHeart,
   faChartLine,
   faSearch,
+  faAirFreshener,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faComment as farComment,
@@ -62,7 +63,8 @@ library.add(
   farSmile,
   farCalendarAlt,
   farSun,
-  faSearch
+  faSearch,
+  faAirFreshener
 );
 
 Vue.component("Fa", FontAwesomeIcon);

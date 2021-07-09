@@ -72,6 +72,7 @@ export default Vue.extend({
   &__write-status
     padding: 4px 0 8px
     border-bottom: 1px solid #eee
+    background: white
     &__container
       padding: 0 16px
       display: flex

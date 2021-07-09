@@ -107,6 +107,7 @@ export default Vue.extend({
   border-bottom: 1px solid #eee
   transition: background 0.2s
   cursor: pointer
+  background: white
   &:hover
     background: rgba(0, 0, 0, 0.03)
   &__container

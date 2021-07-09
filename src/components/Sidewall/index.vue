@@ -15,6 +15,18 @@
     </div>
     <div class="sidewall__trends">
       <SectionTitle text="Trends for you" />
+      <TrendItem />
+      <TrendItem />
+      <TrendItem />
+      <TrendItem />
+      <TrendItem />
+      <ShowMore />
+    </div>
+    <div class="sidewall__follow">
+      <SectionTitle text="Who to follow" />
+      <FollowItem />
+      <FollowItem />
+      <ShowMore />
     </div>
   </div>
 </template>
@@ -22,10 +34,16 @@
 <script lang="ts">
 import Vue from "vue";
 import SectionTitle from "./SectionTitle.vue";
+import TrendItem from "./TrendItem.vue";
+import ShowMore from "./ShowMore.vue";
+import FollowItem from "./FollowItem.vue";
 
 export default Vue.extend({
   components: {
     SectionTitle,
+    TrendItem,
+    ShowMore,
+    FollowItem,
   },
 });
 </script>
@@ -41,6 +59,7 @@ export default Vue.extend({
     height: 53px
     width: 350px
     background: white
+    z-index: 99
   &__search-box
     display: flex
     background: rgb(239, 243, 244)
@@ -67,8 +86,10 @@ export default Vue.extend({
         padding: 12px
         border: none
         width: 100%
-  &__trends
+  &__trends,
+  &__follow
     border-radius: 16px
     background: #f7f9f9
-    height: 200px
+    margin-top: 20px
+    overflow: hidden
 </style>

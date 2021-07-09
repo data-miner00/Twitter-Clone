@@ -8,11 +8,13 @@
     </header>
 
     <main class="user-layout__main">
-      <div class="user-layout__main__wall">
-        <Topbar />
-        <router-view />
+      <div class="wrap">
+        <div class="user-layout__main__wall">
+          <Topbar />
+          <router-view />
+        </div>
+        <div class="user-layout__main__sidewall"></div>
       </div>
-      <div class="user-layout__main__sidewall"></div>
     </main>
   </div>
 </template>
@@ -40,19 +42,23 @@ export default Vue.extend({
     justify-content: flex-end
     border-right: 1px solid #eee
 
+
   &__main
-    display: flex
-    justify-content: space-between
     min-height: 100vh
     flex-shrink: 1
     flex-grow: 1
     align-items: flex-start
-    width: 990px
+    .wrap
+      justify-content: space-between
+      display: flex
+      width: 990px
     &__wall
       max-width: 600px
       min-height: 100%
       border-right: 1px solid #eee
+      box-sizing: content-box
     &__sidewall
-      width: 290px
+      width: 350px
       background: #eee
+      min-height: 1248px
 </style>

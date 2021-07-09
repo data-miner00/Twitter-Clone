@@ -28,6 +28,15 @@
       <FollowItem />
       <ShowMore />
     </div>
+    <div class="sidewall__topics">
+      <SectionTitle text="Topics to follow" />
+      <TopicItem />
+      <TopicItem />
+      <TopicItem />
+      <TopicItem />
+      <TopicItem />
+      <ShowMore />
+    </div>
   </div>
 </template>
 
@@ -37,6 +46,7 @@ import SectionTitle from "./SectionTitle.vue";
 import TrendItem from "./TrendItem.vue";
 import ShowMore from "./ShowMore.vue";
 import FollowItem from "./FollowItem.vue";
+import TopicItem from "./TopicItem.vue";
 
 export default Vue.extend({
   components: {
@@ -44,6 +54,7 @@ export default Vue.extend({
     TrendItem,
     ShowMore,
     FollowItem,
+    TopicItem,
   },
 });
 </script>
@@ -87,9 +98,10 @@ export default Vue.extend({
         border: none
         width: 100%
   &__trends,
-  &__follow
+  &__follow,
+  &__topics
     border-radius: 16px
     background: #f7f9f9
-    margin-top: 20px
+    margin-top: 15px
     overflow: hidden
 </style>

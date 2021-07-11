@@ -37,6 +37,7 @@
       <TopicItem />
       <ShowMore />
     </div>
+    <Footer :navLinks="navLinks" />
   </div>
 </template>
 
@@ -47,6 +48,7 @@ import TrendItem from "./TrendItem.vue";
 import ShowMore from "./ShowMore.vue";
 import FollowItem from "./FollowItem.vue";
 import TopicItem from "./TopicItem.vue";
+import Footer from "../Footer.vue";
 
 export default Vue.extend({
   components: {
@@ -55,6 +57,37 @@ export default Vue.extend({
     ShowMore,
     FollowItem,
     TopicItem,
+    Footer,
+  },
+  computed: {
+    navLinks() {
+      return [
+        {
+          name: "Terms of Service",
+          destination: "/",
+        },
+        {
+          name: "Privacy Policy",
+          destination: "/",
+        },
+        {
+          name: "Cookie Policy",
+          destination: "/",
+        },
+        {
+          name: "Ads info",
+          destination: "/",
+        },
+        {
+          name: "More",
+          destination: "/",
+        },
+        {
+          name: "&copy; 2021 Twitter, Inc",
+          destination: "/",
+        },
+      ];
+    },
   },
 });
 </script>

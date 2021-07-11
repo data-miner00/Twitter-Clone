@@ -19,6 +19,8 @@ import {
   faSearch,
   faAirFreshener,
   faTimes,
+  faChevronDown,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faComment as farComment,
@@ -66,7 +68,9 @@ library.add(
   farSun,
   faSearch,
   faAirFreshener,
-  faTimes
+  faTimes,
+  faChevronDown,
+  faCheck
 );
 
 Vue.component("Fa", FontAwesomeIcon);

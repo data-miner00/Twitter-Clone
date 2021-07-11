@@ -1,0 +1,21 @@
+
+@mixin set-seperator-border($position)
+  $seperator-border: 1px solid #eee
+  @if $position == top
+    border-top: $seperator-border
+  @else if $position == left
+    border-left: $seperator-border
+  @else if $position == bottom
+    border-bottom: $seperator-border
+  @else if $position == right
+    border-right: $seperator-border
+  @else
+    @error "Unknown position: #{$position}"
+  
+
+@mixin set-border-radius($radius)
+  border-radius: $radius
+
+@mixin set-border-round
+  @include set-border-radius(999px)
+  

@@ -89,7 +89,7 @@ export default Vue.extend({
         justify-content: center
         align-items: center
         border-radius: 250px
-        background: $primary
+        background: $twitter-blue
         opacity: 0.5
         width: 100%
         div
@@ -97,7 +97,7 @@ export default Vue.extend({
           font-weight: 600
           color: white
     &__actions
-      color: $link
+      color: $footer-link-font-color
       font-size: 0.9em
       div
         width: fit-content

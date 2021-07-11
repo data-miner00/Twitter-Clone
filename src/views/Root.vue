@@ -28,48 +28,96 @@
       </div>
       <div class="root__content__illustration"></div>
     </div>
-    <nav class="root__footer">
-      <router-link to="/" class="root__footer__link">About</router-link>
-      <router-link to="/" class="root__footer__link">Help Center</router-link>
-      <router-link to="/" class="root__footer__link"
-        >Terms of Service</router-link
-      >
-      <router-link to="/" class="root__footer__link"
-        >Privacy Policy</router-link
-      >
-      <router-link to="/" class="root__footer__link">Cookie Policy</router-link>
-      <router-link to="/" class="root__footer__link">Ads info</router-link>
-      <router-link to="/" class="root__footer__link">Blog</router-link>
-      <router-link to="/" class="root__footer__link">Status</router-link>
-      <router-link to="/" class="root__footer__link">Careers</router-link>
-      <router-link to="/" class="root__footer__link"
-        >Brand Resources</router-link
-      >
-      <router-link to="/" class="root__footer__link">Status</router-link>
-      <router-link to="/" class="root__footer__link">Careers</router-link>
-      <router-link to="/" class="root__footer__link"
-        >Brand Resources</router-link
-      >
-      <router-link to="/" class="root__footer__link">Advertising</router-link>
-      <router-link to="/" class="root__footer__link">Marketing</router-link>
-      <router-link to="/" class="root__footer__link"
-        >Finicky for Business</router-link
-      >
-      <router-link to="/" class="root__footer__link">Developers</router-link>
-      <router-link to="/" class="root__footer__link">Directory</router-link>
-      <router-link to="/" class="root__footer__link">Settings</router-link>
-      <div to="/" class="root__footer__link">&copy; 2021 Finicky, Inc.</div>
-    </nav>
+    <Footer :navLinks="navLinks" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import Footer from "../components/Footer.vue";
+
 export default Vue.extend({
+  components: {
+    Footer,
+  },
   data: () => ({
     input_identifier: "",
     input_password: "",
   }),
+  computed: {
+    navLinks() {
+      return [
+        {
+          name: "About",
+          destination: "/",
+        },
+        {
+          name: "Help Center",
+          destination: "/",
+        },
+        {
+          name: "Terms of Service",
+          destination: "/",
+        },
+        {
+          name: "Privacy Policy",
+          destination: "/",
+        },
+        {
+          name: "Cookie Policy",
+          destination: "/",
+        },
+        {
+          name: "Ads info",
+          destination: "/",
+        },
+        {
+          name: "Blog",
+          destination: "/",
+        },
+        {
+          name: "Status",
+          destination: "/",
+        },
+        {
+          name: "Careers",
+          destination: "/",
+        },
+        {
+          name: "Brand Resources",
+          destination: "/",
+        },
+        {
+          name: "Advertising",
+          destination: "/",
+        },
+        {
+          name: "Marketing",
+          destination: "/",
+        },
+        {
+          name: "Finicky for Business",
+          destination: "/",
+        },
+        {
+          name: "Developers",
+          destination: "/",
+        },
+        {
+          name: "Directory",
+          destination: "/",
+        },
+        {
+          name: "Settings",
+          destination: "/",
+        },
+        {
+          name: "&copy; 2021 Finicky, Inc.",
+          destination: "/",
+        },
+      ];
+    },
+  },
 });
 </script>
 
@@ -121,12 +169,12 @@ export default Vue.extend({
           &.register
 
             color: white
-            background: $primary
+            background: $twitter-blue
           &.login
 
-            color: $primary
+            color: $twitter-blue
             background: white
-            border: 1px solid $primary
+            border: 1px solid $twitter-blue
 
     &__illustration
       background-image: url("http://localhost:8080/login_hero.jpg")
@@ -134,19 +182,6 @@ export default Vue.extend({
       background-position: center
       background-repeat: no-repeat
       min-height: 45vh
-
-  &__footer
-    padding: 12px 16px
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-
-    &__link
-      display: block
-      padding-right: 16px
-      margin: 4px 0
-      font-size: .75em
-      color: $foot
 
 @media screen and (min-width: 500px)
   .root
@@ -206,5 +241,5 @@ export default Vue.extend({
       &__illustration
         flex-basis: 50%
         flex-grow: 1
-        background-color: $primary
+        background-color: $twitter-blue
 </style>

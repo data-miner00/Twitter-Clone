@@ -102,6 +102,7 @@ export default Vue.extend({
 </script>
 
 <style lang="sass" scoped>
+@import "../assets/sass/_variables"
 .post
   padding: 0 16px
   border-bottom: 1px solid #eee
@@ -130,7 +131,7 @@ export default Vue.extend({
             width: 48px
       &__right
         flex-grow: 1
-        padding-bottom: 12px
+        padding-bottom: 2px
         &__top
 
           display: flex
@@ -190,7 +191,7 @@ export default Vue.extend({
             width: 100%
 
         &__actions
-          margin-top: 12px
+          margin-top: 2px
           display: flex
           justify-content: space-between
           color: rgb(83, 100, 113)
@@ -199,10 +200,36 @@ export default Vue.extend({
           div
             width: fit-content
             display: flex
+            align-items: center
+            transition: .1s color ease, .1s background ease
           .icon
             font-size: 18px
+            padding: 12px
+            border-radius: 250px
 
           .numbers
             font-size: 13px
             padding: 0 12px
+
+          .comment
+            &:hover
+              & .icon
+                background: $accent-blue-translucent
+                color: $accent-blue
+              & .numbers
+                color: $accent-blue
+          .retweet
+            &:hover
+              & .icon
+                background: $accent-green-translucent
+                color: $accent-green
+              & .numbers
+                color: $accent-green
+          .like
+            &:hover
+              & .icon
+                background: $accent-red-translucent
+                color: $accent-red
+              & .numbers
+                color: $accent-red
 </style>

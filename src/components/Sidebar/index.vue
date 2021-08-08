@@ -54,31 +54,31 @@ export default Vue.extend({
         {
           link: "Notifications",
           icon: "bell",
-          to: "/u",
+          to: "/u/notifications",
           active: false,
         },
         {
           link: "Messages",
           icon: "envelope",
-          to: "/u",
+          to: "/u/messages",
           active: false,
         },
         {
           link: "Bookmarks",
           icon: "bookmark",
-          to: "/s",
+          to: "/u/bookmarks",
           active: false,
         },
         {
           link: "Lists",
           icon: "sticky-note",
-          to: "/s",
+          to: "/u/lists",
           active: false,
         },
         {
           link: "Profile",
           icon: "user",
-          to: "/s",
+          to: "/u/profile",
           active: false,
         },
         {

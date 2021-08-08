@@ -60,6 +60,7 @@ export default Vue.extend({
 
     &__follow-btn
 
+      // WARNING: Repeated codes below
       &__actual-btn
         min-height: 32px
         min-width: 79px

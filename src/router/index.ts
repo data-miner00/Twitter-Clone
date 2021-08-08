@@ -45,6 +45,54 @@ const routes: Array<RouteConfig> = [
         component: () =>
           import(/* webpackChunkName: "home" */ "../views/Home.vue"),
       },
+      {
+        path: "explore",
+        name: "Explore",
+        component: () =>
+          import(
+            /* webpackChunkName: "explore" */ "../views/Explore/index.vue"
+          ),
+        children: [
+          {
+            path: "",
+            name: "Foryou",
+            component: () =>
+              import(
+                /* webpackChunkName: "foryou" */ "../views/Explore/ForYou.vue"
+              ),
+          },
+          {
+            path: "news",
+            name: "News",
+            component: () =>
+              import(
+                /* webpackChunkName: "news" */ "../views/Explore/News.vue"
+              ),
+          },
+          {
+            path: "sports",
+            name: "Sports",
+            component: () =>
+              import(
+                /* webpackChunkName: "sports" */ "../views/Explore/Sports.vue"
+              ),
+          },
+          {
+            path: "fun",
+            name: "Fun",
+            component: () =>
+              import(/* webpackChunkName: "fun" */ "../views/Explore/Fun.vue"),
+          },
+          {
+            path: "entertainment",
+            name: "Entertainment",
+            component: () =>
+              import(
+                /* webpackChunkName: "entertainment" */ "../views/Explore/Entertainment.vue"
+              ),
+          },
+        ],
+      },
     ],
   },
   // {

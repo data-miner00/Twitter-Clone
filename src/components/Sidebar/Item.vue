@@ -1,16 +1,18 @@
 <template>
-  <div class="item">
-    <div class="item__wrapper" :class="{ active: active }">
-      <div class="item__wrapper__icon">
-        <fa :icon="icon" />
-      </div>
-      <div class="item__wrapper__title">
-        <div>
-          <span>{{ linkTitle }}</span>
+  <router-link :to="to" v-slot="{ isExactActive, navigate }">
+    <div class="item" @click="navigate">
+      <div class="item__wrapper" :class="{ active: isExactActive }">
+        <div class="item__wrapper__icon">
+          <fa :icon="icon" />
+        </div>
+        <div class="item__wrapper__title">
+          <div>
+            <span>{{ linkTitle }}</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script lang="ts">

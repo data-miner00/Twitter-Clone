@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebar__top">
       <div class="sidebar__top__logo">
-        <img src="logo.svg" alt="logo" height="42" />
+        <img src="/logo.svg" alt="logo" height="42" />
       </div>
       <div class="sidebar__top__links">
         <Item
@@ -42,25 +42,25 @@ export default Vue.extend({
         {
           link: "Home",
           icon: "igloo",
-          to: "/s",
+          to: "/u",
           active: true,
         },
         {
           link: "Explore",
           icon: "hashtag",
-          to: "/s",
+          to: "/u/explore",
           active: false,
         },
         {
           link: "Notifications",
           icon: "bell",
-          to: "/s",
+          to: "/u",
           active: false,
         },
         {
           link: "Messages",
           icon: "envelope",
-          to: "/s",
+          to: "/u",
           active: false,
         },
         {

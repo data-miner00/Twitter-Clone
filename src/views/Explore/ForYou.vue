@@ -16,6 +16,9 @@
         </div>
       </div>
     </section>
+    <section class="for-you__trends-for-you"></section>
+    <section class="for-you__whats-happening"></section>
+    <section class="for-you__custom-topic"></section>
   </div>
 </template>
 
@@ -28,7 +31,6 @@ export default Vue.extend({});
 .for-you
   min-height: 200vh
   &__banner
-    padding-top: 3px
     &__bg
       background: #eee
       height: 340px

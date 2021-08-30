@@ -77,6 +77,7 @@ export default Vue.extend({});
     position: sticky
     top: 53px
     background: #fff
+    border-bottom: 1px solid rgb(239, 243, 244)
     &__link
       text-align: center
       padding: 0 16px

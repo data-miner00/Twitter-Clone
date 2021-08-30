@@ -25,8 +25,8 @@
     <div
       class="setting-popup"
       v-if="isPanelClicked"
-      v-click-outside="verifyPanelState"
     >
+      <!-- v-click-outside="verifyPanelState" -->
       <div class="info-duplicate">
         <div class="avatar-wrap b" size="48">
           <img :src="avatarUri" :alt="username" />

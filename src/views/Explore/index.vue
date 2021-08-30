@@ -74,6 +74,9 @@ export default Vue.extend({});
   &__nav
     display: flex
     color: $footer-link-font-color
+    position: sticky
+    top: 53px
+    background: #fff
     &__link
       text-align: center
       padding: 0 16px

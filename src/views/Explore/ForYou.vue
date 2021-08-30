@@ -26,6 +26,7 @@ export default Vue.extend({});
 
 <style lang="sass" scoped>
 .for-you
+  min-height: 200vh
   &__banner
     padding-top: 3px
     &__bg
@@ -33,6 +34,7 @@ export default Vue.extend({});
       height: 340px
       background-image: url("/cloud.jpeg")
       position: relative
+      z-index: -1
     &__text
       color: white
       position: absolute
@@ -45,6 +47,7 @@ export default Vue.extend({});
       display: flex
       flex-direction: column
       justify-content: flex-end
+
       &__top
         display: flex
         align-items: center

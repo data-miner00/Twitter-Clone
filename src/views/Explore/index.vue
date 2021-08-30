@@ -80,9 +80,15 @@ export default Vue.extend({});
       flex-grow: 1
       font-weight: 700
       cursor: pointer
+      transition: background-color .2s ease
       span
         display: block
         padding: 16px 0
+        width: fit-content
+        margin: 0 auto
+
+      &:hover
+        background-color: rgba(15, 20, 25, .1)
 
       &.active
         color: $twitter-purple

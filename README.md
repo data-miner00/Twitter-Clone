@@ -1,34 +1,7 @@
-# client
+# A Complete Twitter Ripoff
 
-## Project setup
-```
-yarn install
-```
+This projects does not intend to infringe any of the laws and copyrights owned by Twitter Inc. but to learn and improve my web design skills by mimicking the Twitter interface as much as I can and thats the sole purpose that drives the development.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Todo
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [ ] Add floating bubble for user related hovers

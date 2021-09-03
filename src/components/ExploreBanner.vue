@@ -43,6 +43,9 @@ export default Vue.extend({
     height: 340px
     position: relative
     z-index: -1
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
   &__text
     color: white
     position: absolute

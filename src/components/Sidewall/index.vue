@@ -130,6 +130,7 @@ export default Vue.extend({
         padding: 12px
         border: none
         width: 100%
+        outline: none
   &__trends,
   &__follow,
   &__topics

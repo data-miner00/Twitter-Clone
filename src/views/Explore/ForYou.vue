@@ -9,8 +9,25 @@
         :isLiveStyle="true"
       />
     </section>
-    <section class="for-you__trends-for-you"></section>
-    <section class="for-you__whats-happening"></section>
+    <div class="secondary-seperator"></div>
+    <section class="for-you__trends-for-you">
+      <ForYouContentWrapper title="Trends for you">
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+      </ForYouContentWrapper>
+    </section>
+    <section class="for-you__whats-happening">
+      <ForYouContentWrapper title="What's happening">
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+        <TrendItem />
+      </ForYouContentWrapper>
+    </section>
     <section class="for-you__custom-topic"></section>
   </div>
 </template>
@@ -18,10 +35,14 @@
 <script lang="ts">
 import Vue from "vue";
 import ExploreBanner from "@/components/ExploreBanner.vue";
+import ForYouContentWrapper from "@/components/ForYouContentWrapper.vue";
+import TrendItem from "@/components/Sidewall/TrendItem.vue";
 
 export default Vue.extend({
   components: {
     ExploreBanner,
+    ForYouContentWrapper,
+    TrendItem,
   },
 });
 </script>

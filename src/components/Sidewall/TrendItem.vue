@@ -1,7 +1,10 @@
 <template>
   <div class="trend-item">
     <div class="trend-item__first-row">
-      <div class="trend-item__first-row__text">Trending in Malaysia</div>
+      <div class="trend-item__first-row__text">
+        <span v-if="trendingByCategory">{{ category }} · Trending</span>
+        <span v-else>Trending in {{ country }}</span>
+      </div>
       <div class="trend-item__first-row__action-icon">
         <div class="real-icon">
           <div>
@@ -10,8 +13,10 @@
         </div>
       </div>
     </div>
-    <div class="trend-item__keyword">Pfizer</div>
-    <div class="trend-item__number-counts">16k Tweets</div>
+    <div class="trend-item__keyword">{{ topicOrHashtag }}</div>
+    <div class="trend-item__number-counts">
+      {{ tweetCount | simplifyCount }} Tweets
+    </div>
   </div>
 </template>
 
@@ -20,6 +25,32 @@ import Vue from "vue";
 export default Vue.extend({
   props: {
     //
+    country: {
+      type: String,
+      default: "Malaysia",
+    },
+    category: {
+      type: String,
+      default: "Sports",
+    },
+    trendingByCategory: {
+      type: Boolean,
+      default: false,
+    },
+    topicOrHashtag: {
+      type: String,
+      default: "Pfizer",
+    },
+    tweetCount: {
+      type: Number,
+      default: 16990,
+    },
+  },
+  filters: {
+    simplifyCount(count: number): string {
+      let thousands = count / 1000;
+      return thousands.toFixed(1) + "k";
+    },
   },
 });
 </script>

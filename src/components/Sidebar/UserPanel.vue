@@ -22,10 +22,7 @@
         <fa icon="chevron-down" />
       </div>
     </div>
-    <div
-      class="setting-popup"
-      v-if="isPanelClicked"
-    >
+    <div class="setting-popup" v-if="isPanelClicked">
       <!-- v-click-outside="verifyPanelState" -->
       <div class="info-duplicate">
         <div class="avatar-wrap b" size="48">

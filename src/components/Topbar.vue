@@ -28,6 +28,7 @@ export default Vue.extend({});
   background: white
   display: flex
   align-items: center
+  z-index: 999
   &--regular
     display: flex
     align-items: center

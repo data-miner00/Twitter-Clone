@@ -78,6 +78,7 @@ export default Vue.extend({});
     top: 53px
     background: #fff
     border-bottom: 1px solid rgb(239, 243, 244)
+    z-index: 999
     &__link
       text-align: center
       padding: 0 16px

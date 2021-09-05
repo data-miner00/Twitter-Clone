@@ -68,6 +68,7 @@
         />
       </ForYouContentWrapper>
     </section>
+    <div class="secondary-seperator"></div>
     <section class="for-you__custom-topic">
       <ForYouContentWrapper title="UX design" :isSuggestedTopic="true">
         <PostItem />

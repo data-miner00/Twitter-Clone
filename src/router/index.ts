@@ -93,6 +93,31 @@ const routes: Array<RouteConfig> = [
           },
         ],
       },
+      {
+        path: "notifications",
+        component: () =>
+          import(
+            /* webpackChunkName: "notifications" */ "../views/Notifications/index.vue"
+          ),
+        children: [
+          {
+            path: "",
+            name: "All",
+            component: () =>
+              import(
+                /* webpackChunkName: "all" */ "../views/Notifications/All.vue"
+              ),
+          },
+          {
+            path: "mentions",
+            name: "Mentions",
+            component: () =>
+              import(
+                /* webpackChunkName: "mentions" */ "../views/Notifications/Mentions.vue"
+              ),
+          },
+        ],
+      },
     ],
   },
   // {

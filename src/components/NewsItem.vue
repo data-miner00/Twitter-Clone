@@ -79,6 +79,7 @@ export default Vue.extend({
     display: flex
     justify-content: space-between
     &__left
+      margin-right: 12px
       &__top
         display: flex
         align-items: center

@@ -26,7 +26,15 @@
         categoryOrOfficial="Bloomberg Opinion"
         :isOfficial="true"
         thumbnailUrl="/bestplace.jpg"
-        officialAvatarUrl="/brooklyn99.jpg"
+        officialAvatarUrl="/bo.jpg"
+      />
+      <NewsItem
+        title='During Covid-19, "traveling" nurses can make $5,000 or more a week'
+        timeElapsed="4 hours ago"
+        categoryOrOfficial="Quartz"
+        :isOfficial="true"
+        thumbnailUrl="/nurses.jpg"
+        officialAvatarUrl="/quartz_profile.jpg"
       />
     </section>
   </div>

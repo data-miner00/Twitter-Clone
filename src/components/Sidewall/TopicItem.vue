@@ -5,11 +5,7 @@
       <div class="topic-item__left__category">K-pop group</div>
     </div>
     <div class="topic-item__right">
-      <div class="topic-item__right__follow">
-        <div>
-          <span>Follow</span>
-        </div>
-      </div>
+      <FollowButton />
       <div class="topic-item__right__remove">
         <div>
           <fa icon="times" />
@@ -21,9 +17,13 @@
 
 <script lang="ts">
 import Vue from "vue";
+import FollowButton from "@/components/FollowButton.vue";
 export default Vue.extend({
   props: {
     //
+  },
+  components: {
+    FollowButton,
   },
 });
 </script>
@@ -64,22 +64,4 @@ export default Vue.extend({
       &:hover
         background: rgba(121, 75, 196, .1)
         // color: rgb(29, 161, 242)
-
-
-    // WARNING: Repeated codes below
-    &__follow
-      min-height: 32px
-      min-width: 79px
-      border-radius: 250px
-      border: 1px solid rgb(121, 75, 196)
-      color: rgb(121, 75, 196)
-      display: flex
-      justify-content: center
-      align-items: center
-      font-weight: 700
-      transition: background .2s
-      &:hover
-        background: rgba(121, 75, 196, .1)
-      div
-        width: fit-content
 </style>

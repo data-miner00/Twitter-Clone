@@ -9,11 +9,7 @@
         <div class="follow-item__content__usernames__username">@faline123</div>
       </div>
       <div class="follow-item__content__follow-btn">
-        <div class="follow-item__content__follow-btn__actual-btn">
-          <div>
-            <span>Follow</span>
-          </div>
-        </div>
+        <FollowButton />
       </div>
     </div>
   </div>
@@ -21,9 +17,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+import FollowButton from "../FollowButton.vue";
+
 export default Vue.extend({
   props: {
     //
+  },
+  components: {
+    FollowButton,
   },
 });
 </script>
@@ -57,23 +58,4 @@ export default Vue.extend({
         font-weight: 700
       &__username
         color: #536471
-
-    &__follow-btn
-
-      // WARNING: Repeated codes below
-      &__actual-btn
-        min-height: 32px
-        min-width: 79px
-        border-radius: 250px
-        border: 1px solid rgb(121, 75, 196)
-        color: rgb(121, 75, 196)
-        display: flex
-        justify-content: center
-        align-items: center
-        font-weight: 700
-        transition: background .2s
-        &:hover
-          background: rgba(121, 75, 196, .1)
-        div
-          width: fit-content
 </style>

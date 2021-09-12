@@ -2,35 +2,35 @@
   <div class="sports-item">
     <div class="sports-item__inner">
       <div class="sports-item__inner__header">
-        <div class="sports-item__inner__header__left">MLB</div>
+        <div class="sports-item__inner__header__left">{{ event }}</div>
         <div class="sports-item__inner__header__right">
-          <span class="label">Final</span> ·
-          <span class="result">SF won</span>
+          <span class="label" :class="{ live: isLive }">{{ label }}</span> ·
+          <span class="result">{{ result }}</span>
         </div>
       </div>
       <div class="sports-item__inner__content">
         <div
           class="sports-item__inner__content__team"
-          style="background-color: rgb(253, 90, 30)"
+          :style="`background-color: ${team1.backgroundColor}`"
         >
           <div class="sports-item__inner__content__team__inner">
             <div class="avatar">
-              <img src="/SF.png" alt="sf" />
+              <img :src="team1.avatarUrl" :alt="team1.avatarAlt" />
             </div>
-            <div class="name">Sans Francisco Giants</div>
-            <div class="score">6</div>
+            <div class="name">{{ team1.name }}</div>
+            <div class="score">{{ team1.score }}</div>
           </div>
         </div>
         <div
           class="sports-item__inner__content__team"
-          style="background-color: rgb(14, 51, 134)"
+          :style="`background-color: ${team2.backgroundColor}`"
         >
           <div class="sports-item__inner__content__team__inner">
             <div class="avatar">
-              <img src="/CHC.png" alt="chc" />
+              <img :src="team2.avatarUrl" :alt="team2.avatarAlt" />
             </div>
-            <div class="name">Chicago Cubs</div>
-            <div class="score lose">1</div>
+            <div class="name">{{ team2.name }}</div>
+            <div class="score">{{ team2.score }}</div>
           </div>
         </div>
       </div>
@@ -40,9 +40,46 @@
 
 <script lang="ts">
 import Vue from "vue";
+
 export default Vue.extend({
   props: {
-    //
+    event: {
+      type: String,
+      default: "MLB",
+    },
+    label: {
+      type: String,
+      default: "Final",
+    },
+    result: {
+      type: String,
+      default: "SF won",
+    },
+    team1: {
+      type: Object,
+      default: () => ({
+        avatarUrl: "/SF.png",
+        avatarAlt: "san francisco giants",
+        name: "San Francisco Giants",
+        score: 6,
+        backgroundColor: "rgb(253, 90, 30)",
+      }),
+    },
+    team2: {
+      type: Object,
+      default: () => ({
+        avatarUrl: "/CHC.png",
+        avatarAlt: "chicago cubs",
+        name: "Chicago Cubs",
+        score: 1,
+        backgroundColor: "rgb(14, 51, 134)",
+      }),
+    },
+  },
+  computed: {
+    isLive(): boolean {
+      return this.label == "Live";
+    },
   },
 });
 </script>
@@ -67,6 +104,8 @@ export default Vue.extend({
         color: #536471
         .label
           font-weight: 700
+          &.live
+            color: rgb(249, 24, 128)
     &__content
       border-radius: 4px
       overflow: hidden

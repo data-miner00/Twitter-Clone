@@ -19,7 +19,13 @@
         thumbnailUrl="/soccer.jpg"
       />
       <SportsItem />
-      <SportsItem />
+      <SportsItem
+        event="MLB"
+        label="Live"
+        result="Top 7th"
+        :team1="team1"
+        :team2="team2"
+      />
       <NewsItem
         title="Will NHL players be at the Beijing Olympics? It’s still not a sure thing yet"
         timeElapsed="September 9, 2021"
@@ -37,12 +43,33 @@ import Vue from "vue";
 import ExploreBanner from "@/components/ExploreBanner.vue";
 import SportsItem from "@/components/SportsItem.vue";
 import NewsItem from "@/components/NewsItem.vue";
+import ISportsTeam from "@/models/ISportsTeam";
 
 export default Vue.extend({
   components: {
     ExploreBanner,
     SportsItem,
     NewsItem,
+  },
+  computed: {
+    team1(): ISportsTeam {
+      return {
+        avatarUrl: "/washington.png",
+        avatarAlt: "washington nationals",
+        name: "Washington Nationals",
+        score: 6,
+        backgroundColor: "rgb(171, 0, 3)",
+      };
+    },
+    team2(): ISportsTeam {
+      return {
+        avatarUrl: "/pittsburgh.png",
+        avatarAlt: "pittsburgh pirates",
+        name: "Pittsburgh Pirates",
+        score: 9,
+        backgroundColor: "rgb(39, 37, 31)",
+      };
+    },
   },
 });
 </script>

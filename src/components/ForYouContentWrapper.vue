@@ -124,4 +124,6 @@ export default Vue.extend({
         line-height: 20px
         &:hover
           text-decoration: underline
+      &__category
+        color: rgb(83, 100, 113)
 </style>

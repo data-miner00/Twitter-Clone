@@ -124,6 +124,18 @@ const routes: Array<RouteConfig> = [
         component: () =>
           import(/* webpackChunkName: "bookmarks" */ "../views/Bookmarks.vue"),
       },
+      {
+        path: "lists",
+        name: "Lists",
+        component: () =>
+          import(/* webpackChunkName: "lists" */ "../views/Lists.vue"),
+      },
+      {
+        path: "profile",
+        name: "Profile",
+        component: () =>
+          import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+      },
     ],
   },
   // {

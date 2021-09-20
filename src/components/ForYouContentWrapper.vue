@@ -20,8 +20,7 @@
     <div class="content-wrapper__content">
       <slot />
     </div>
-    <ShowMore v-if="!isSuggestedTopic" />
-    <div class="follow-topic" v-else>
+    <div class="follow-topic" v-if="isSuggestedTopic">
       <div class="follow-topic__left">
         <div class="follow-topic__left__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
@@ -42,6 +41,7 @@
         <FollowButton />
       </div>
     </div>
+    <ShowMore v-else-if="!isSuggestedTopic && hasShowMoreBtn" />
   </div>
 </template>
 
@@ -63,6 +63,10 @@ export default Vue.extend({
     category: {
       type: String,
       default: "Computer Programming",
+    },
+    hasShowMoreBtn: {
+      type: Boolean,
+      default: true,
     },
   },
   components: {

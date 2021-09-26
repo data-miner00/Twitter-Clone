@@ -2,9 +2,9 @@
   <div class="login">
     <div class="login__content">
       <div class="login__content__logo">
-        <img src="http://localhost:8080/logo.svg" alt="logo" />
+        <img src="logo.svg" alt="logo" />
       </div>
-      <div class="login__content__title">Log in to Finicky</div>
+      <div class="login__content__title">Log in to Twitter</div>
       <div class="login__content__input id">
         <div>
           <input type="text" placeholder="Phone, email or username" />

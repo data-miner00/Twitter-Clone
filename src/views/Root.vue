@@ -9,7 +9,7 @@
           <div class="root__content__show__title">
             <span>New Revolution</span>
           </div>
-          <div class="root__content__show__subtitle">Join Finicky today.</div>
+          <div class="root__content__show__subtitle">Join Twitter today.</div>
           <div class="root__content__show__actions">
             <router-link
               to="/register"
@@ -96,7 +96,7 @@ export default Vue.extend({
           destination: "/",
         },
         {
-          name: "Finicky for Business",
+          name: "Twitter for Business",
           destination: "/",
         },
         {
@@ -112,7 +112,7 @@ export default Vue.extend({
           destination: "/",
         },
         {
-          name: "&copy; 2021 Finicky, Inc.",
+          name: "&copy; 2021 Twitter, Inc.",
           destination: "/",
         },
       ];

@@ -59,6 +59,8 @@ export default Vue.extend({
         display: flex
         align-items: center
         font-size: 13px
+        &:hover &__name
+          text-decoration: underline
         &__avatar
           width: 16px
           height: 16px

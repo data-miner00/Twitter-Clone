@@ -44,7 +44,35 @@
       </div>
     </div>
     <div class="profile__pages">
-      <div class="profile__pages__tabs">//</div>
+      <div class="profile__pages__tabs">
+        <router-link
+          class="profile__pages__tabs__tweets"
+          :to="{ name: 'profile-tweets' }"
+          exact-active-class="active"
+          ><div><span>Tweets</span></div></router-link
+        >
+        <router-link
+          class="profile__pages__tabs__tweets-replies"
+          to=""
+          exact-active-class="active"
+          ><div><span>Tweets &amp; replies</span></div></router-link
+        >
+        <router-link
+          class="profile__pages__tabs__media"
+          to=""
+          exact-active-class="active"
+          ><div><span>Media</span></div></router-link
+        >
+        <router-link
+          class="profile__pages__tabs__likes"
+          to=""
+          exact-active-class="active"
+          ><div><span>Likes</span></div></router-link
+        >
+      </div>
+      <div class="profile__pages__views">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -58,6 +86,8 @@ export default Vue.extend({
 </script>
 
 <style lang="sass" scoped>
+@import "../../assets/sass/_variables"
+
 .profile
   width: 600px
   &__info
@@ -142,4 +172,24 @@ export default Vue.extend({
         span
           font-weight: 700
           color: black
+  &__pages
+    &__tabs
+      display: flex
+      border-bottom: 1px solid #eee
+      & > *
+        flex-grow: 1
+        padding: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: background .2s ease
+        span
+          padding: 16px 0
+
+        &:hover
+          background: $background-gray-hover
+        &.active span
+          font-weight: 700
+          color: $twitter-purple
+          border-bottom: 3px solid $twitter-purple
 </style>

@@ -134,7 +134,19 @@ const routes: Array<RouteConfig> = [
         path: "profile",
         name: "Profile",
         component: () =>
-          import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+          import(
+            /* webpackChunkName: "profile" */ "../views/Profile/index.vue"
+          ),
+        children: [
+          {
+            path: "",
+            name: "profile-tweets",
+            component: () =>
+              import(
+                /* webpackChunkName: "profile-tweets" */ "../views/Profile/Tweets.vue"
+              ),
+          },
+        ],
       },
     ],
   },

@@ -43,6 +43,9 @@
         </div>
       </div>
     </div>
+    <div class="profile__pages">
+      <div class="profile__pages__tabs">//</div>
+    </div>
   </div>
 </template>
 

@@ -146,6 +146,30 @@ const routes: Array<RouteConfig> = [
                 /* webpackChunkName: "profile-tweets" */ "../views/Profile/Tweets.vue"
               ),
           },
+          {
+            path: "with_replies",
+            name: "tweets-and-replies",
+            component: () =>
+              import(
+                /* webpackChunkName: "tweets-and-replies" */ "../views/Profile/TweetsAndReplies.vue"
+              ),
+          },
+          {
+            path: "media",
+            name: "media",
+            component: () =>
+              import(
+                /* webpackChunkName: "media" */ "../views/Profile/Media.vue"
+              ),
+          },
+          {
+            path: "likes",
+            name: "likes",
+            component: () =>
+              import(
+                /* webpackChunkName: "likes" */ "../views/Profile/Likes.vue"
+              ),
+          },
         ],
       },
     ],

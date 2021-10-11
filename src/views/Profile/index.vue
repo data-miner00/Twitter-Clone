@@ -53,19 +53,19 @@
         >
         <router-link
           class="profile__pages__tabs__tweets-replies"
-          to=""
+          :to="{ name: 'tweets-and-replies' }"
           exact-active-class="active"
           ><div><span>Tweets &amp; replies</span></div></router-link
         >
         <router-link
           class="profile__pages__tabs__media"
-          to=""
+          :to="{ name: 'media' }"
           exact-active-class="active"
           ><div><span>Media</span></div></router-link
         >
         <router-link
           class="profile__pages__tabs__likes"
-          to=""
+          :to="{ name: 'likes' }"
           exact-active-class="active"
           ><div><span>Likes</span></div></router-link
         >
@@ -184,6 +184,8 @@ export default Vue.extend({
         align-items: center
         transition: background .2s ease
         span
+          color: $post-action-color
+          font-weight: 700
           padding: 16px 0
 
         &:hover

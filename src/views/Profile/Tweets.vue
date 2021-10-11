@@ -1,6 +1,6 @@
 <template>
   <div class="tweets">
-    <PostItem />
+    <PostItem actionDone="liked" />
   </div>
 </template>
 

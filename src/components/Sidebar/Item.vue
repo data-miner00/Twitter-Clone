@@ -22,7 +22,6 @@ export default Vue.extend({
     linkTitle: String,
     icon: String,
     to: String,
-    active: Boolean,
   },
 });
 </script>

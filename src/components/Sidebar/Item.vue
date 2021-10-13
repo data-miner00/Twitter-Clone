@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="to" v-slot="{ isExactActive, navigate }">
+  <router-link :to="to" v-slot="{ isExactActive, navigate }" v-if="to">
     <div class="item" @click="navigate">
       <div class="item__wrapper" :class="{ active: isExactActive }">
         <div class="item__wrapper__icon">
@@ -13,6 +13,20 @@
       </div>
     </div>
   </router-link>
+  <div v-else>
+    <div class="item">
+      <div class="item__wrapper">
+        <div class="item__wrapper__icon">
+          <fa :icon="icon" />
+        </div>
+        <div class="item__wrapper__title">
+          <div>
+            <span>{{ linkTitle }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

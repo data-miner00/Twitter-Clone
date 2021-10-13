@@ -13,6 +13,7 @@
           :to="navLink.to"
           :active="navLink.active"
         />
+        <Item icon="ellipsis-h" linkTitle="More" />
       </div>
       <div class="sidebar__top__tweet">
         <div>
@@ -73,11 +74,6 @@ export default Vue.extend({
           link: "Profile",
           icon: "user",
           to: "/u/profile",
-        },
-        {
-          link: "More",
-          icon: "ellipsis-h",
-          to: "/s",
         },
       ];
     },

@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="to" v-slot="{ isExactActive, navigate }" v-if="to">
+  <router-link :to="to" v-slot="{ isActive, navigate }" v-if="to">
     <div class="item" @click="navigate">
-      <div class="item__wrapper" :class="{ active: isExactActive }">
+      <div class="item__wrapper" :class="{ active: isActive }">
         <div class="item__wrapper__icon">
           <fa :icon="icon" />
         </div>

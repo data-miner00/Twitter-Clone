@@ -76,6 +76,7 @@ export default Vue.extend({
         overflow: hidden
 
         input
+          width: 100%
           font-size: 1em
           border: none
           outline: none

@@ -36,4 +36,5 @@ export default Vue.extend({
 
 .notifications
   width: 600px
+  min-height: 100vh
 </style>

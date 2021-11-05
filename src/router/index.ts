@@ -172,6 +172,29 @@ const routes: Array<RouteConfig> = [
           },
         ],
       },
+      {
+        path: "topics",
+        component: () =>
+          import(/* webpackChunkName: "topics" */ "../views/Topics/index.vue"),
+        children: [
+          {
+            path: "",
+            name: "topics-followed",
+            component: () =>
+              import(
+                /* webpackChunkName: "topics-followed" */ "../views/Topics/Followed.vue"
+              ),
+          },
+          {
+            path: "not_interested",
+            name: "not-interested",
+            component: () =>
+              import(
+                /* webpackChunkName: "not-interested" */ "../views/Topics/NotInterested.vue"
+              ),
+          },
+        ],
+      },
     ],
   },
   // {

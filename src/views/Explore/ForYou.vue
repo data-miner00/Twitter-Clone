@@ -22,8 +22,10 @@
         <TrendItem />
         <TrendItem />
         <TrendItem />
+        <PromotedTrendItem />
       </ForYouContentWrapper>
     </section>
+    <div class="secondary-seperator"></div>
     <section class="for-you__whats-happening">
       <ForYouContentWrapper title="What's happening">
         <NewsItem
@@ -87,6 +89,7 @@ import ForYouContentWrapper from "@/components/ForYouContentWrapper.vue";
 import TrendItem from "@/components/Sidewall/TrendItem.vue";
 import NewsItem from "@/components/NewsItem.vue";
 import PostItem from "@/components/PostItem.vue";
+import PromotedTrendItem from "@/components/Sidewall/PromotedTrendItem.vue";
 
 export default Vue.extend({
   components: {
@@ -95,6 +98,7 @@ export default Vue.extend({
     TrendItem,
     NewsItem,
     PostItem,
+    PromotedTrendItem,
   },
 });
 </script>

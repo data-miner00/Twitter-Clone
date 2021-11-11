@@ -14,6 +14,15 @@
         :category="topic.category"
       />
     </div>
+    <div class="secondary-seperator"></div>
+    <div class="followed__suggested-topics">
+      <div class="followed__suggested-topics__header">
+        <div class="followed__suggested-topics__header__title">
+          Suggested Topics
+        </div>
+        <p>You'll see top Tweets about these right in your Home timeline</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -155,4 +164,17 @@ export default Vue.extend({
     padding: 16px
     color: $post-action-color
     border-bottom: 1px solid rgb(239, 243, 244)
+  &__suggested-topics
+    &__header
+      padding: 12px 16px
+      &__title
+        font-weight: 800
+        line-height: 24px
+        overflow-wrap: break-word
+        font-size: 20px
+      p
+        color: rgb(83, 100, 113)
+        line-height: 16px
+        overflow-wrap: break-word
+        font-size: 13px
 </style>

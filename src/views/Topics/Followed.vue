@@ -22,6 +22,11 @@
         </div>
         <p>You'll see top Tweets about these right in your Home timeline</p>
       </div>
+      <div class="followed__suggested-topics__topics">
+        <TopicSuggestion />
+        <TopicSuggestion />
+        <TopicSuggestion />
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +34,7 @@
 <script lang="ts">
 import Vue from "vue";
 import FollowTopicItem from "@/components/FollowTopicItem.vue";
+import TopicSuggestion from "@/components/TopicSuggestion.vue";
 
 type FollowTopic = {
   title: string;
@@ -38,6 +44,7 @@ type FollowTopic = {
 export default Vue.extend({
   components: {
     FollowTopicItem,
+    TopicSuggestion,
   },
   computed: {
     followTopics(): Array<FollowTopic> {

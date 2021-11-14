@@ -28,6 +28,21 @@
         <TopicSuggestion />
       </div>
     </div>
+    <div class="secondary-seperator"></div>
+    <div class="followed__disclaimer">
+      <div>
+        Topics that you follow are shown here. To see all the things that
+        Twitter thinks you’re interested in, check out
+        <a href="https://twitter.com/settings/your_twitter_data" target="_blank"
+          >Your Twitter data</a
+        >. You can also
+        <a
+          href="https://help.twitter.com/using-twitter/follow-and-unfollow-topics"
+          >learn more</a
+        >
+        about following Topics.
+      </div>
+    </div>
   </div>
 </template>
 
@@ -184,4 +199,16 @@ export default Vue.extend({
         line-height: 16px
         overflow-wrap: break-word
         font-size: 13px
+    &__topics
+      padding: 0 6px
+  &__disclaimer
+    padding: 16px
+    div
+      margin-top: 2px
+      line-height: 20px
+      color: rgb(83, 100, 113)
+      a
+        color: $twitter-purple
+        &:hover
+          text-decoration: underline
 </style>

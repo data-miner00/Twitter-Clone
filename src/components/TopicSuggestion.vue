@@ -38,6 +38,7 @@
   flex-direction: column
   min-width: 222px
   margin: 4px
+  cursor: pointer
 .inner-wrap
   display: flex
   flex-direction: column
@@ -56,6 +57,9 @@
     align-items: center
     padding-right: 12px
     padding-left: 16px
+    transition: background .2s
+    &:hover
+      background: rgba(29, 155, 240, 0.1)
     &__topic
       font-weight: 700
       font-size: 15px
@@ -80,6 +84,9 @@
     display: flex
     justify-content: center
     align-items: center
+    transition: background .2s
+    &:hover
+      background: rgba(29, 155, 240, 0.1)
     div
       display: flex
       border-left: 1px solid rgb(239, 243, 244)

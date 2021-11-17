@@ -27,6 +27,7 @@
         <TopicSuggestion />
         <TopicSuggestion />
       </div>
+      <ShowMore btnText="More Topics" />
     </div>
     <div class="secondary-seperator"></div>
     <div class="followed__disclaimer">
@@ -50,6 +51,7 @@
 import Vue from "vue";
 import FollowTopicItem from "@/components/FollowTopicItem.vue";
 import TopicSuggestion from "@/components/TopicSuggestion.vue";
+import ShowMore from "@/components/Sidewall/ShowMore.vue";
 
 type FollowTopic = {
   title: string;
@@ -60,6 +62,7 @@ export default Vue.extend({
   components: {
     FollowTopicItem,
     TopicSuggestion,
+    ShowMore,
   },
   computed: {
     followTopics(): Array<FollowTopic> {

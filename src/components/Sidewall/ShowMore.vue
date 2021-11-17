@@ -1,12 +1,15 @@
 <template>
-  <div class="show-more">Show more</div>
+  <div class="show-more">{{ btnText }}</div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
   props: {
-    //
+    btnText: {
+      type: String,
+      default: "Show more",
+    },
   },
 });
 </script>

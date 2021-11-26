@@ -17,7 +17,8 @@
       </div>
     </div>
     <div class="follow-topic__right">
-      <FollowButton />
+      <FollowButton v-if="following" />
+      <FollowingButton v-else />
     </div>
   </div>
 </template>
@@ -25,15 +26,20 @@
 <script lang="ts">
 import Vue from "vue";
 import FollowButton from "./FollowButton.vue";
+import FollowingButton from "./FollowingButton.vue";
 
 export default Vue.extend({
   props: {
     title: String,
     category: String,
-    following: Boolean,
+    following: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     FollowButton,
+    FollowingButton,
   },
 });
 </script>

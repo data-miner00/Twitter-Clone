@@ -12,6 +12,7 @@
         :key="index"
         :title="topic.title"
         :category="topic.category"
+        :following="topic.following"
       />
     </div>
     <div class="secondary-seperator"></div>
@@ -56,6 +57,7 @@ import ShowMore from "@/components/Sidewall/ShowMore.vue";
 type FollowTopic = {
   title: string;
   category: string;
+  following?: boolean;
 };
 
 export default Vue.extend({
@@ -70,62 +72,77 @@ export default Vue.extend({
         {
           title: "Apple",
           category: "Tech brand",
+          following: true,
         },
         {
           title: "Artificial intelligence",
           category: "Techonology",
+          following: true,
         },
         {
           title: "Augmented reality",
           category: "Techonology",
+          following: true,
         },
         {
           title: "Business & finance",
           category: "All about business & finance",
+          following: true,
         },
         {
           title: "Business news",
           category: "News",
+          following: true,
         },
         {
           title: "Cloud computing",
           category: "Technology",
+          following: true,
         },
         {
           title: "Cloud platforms",
           category: "Technology",
+          following: true,
         },
         {
           title: "Computer programming",
           category: "Technology",
+          following: true,
         },
         {
           title: "Cybersecurity",
           category: "Technology",
+          following: true,
         },
         {
           title: "Data science",
           category: "Technology",
+          following: true,
         },
         {
           title: "Databases",
           category: "Technology",
+          following: true,
         },
         {
           title: "Game development",
           category: "Gaming",
+          following: true,
         },
         {
           title: "Information security",
           category: "Technology",
+          following: true,
         },
         {
           title: "Internet of things",
           category: "Technology",
+          following: true,
         },
         {
           title: "Linux",
           category: "Operating system",
+          following: true,
         },
         {
           title: "Marketing",

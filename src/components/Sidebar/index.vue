@@ -58,7 +58,7 @@ export default Vue.extend({
         {
           link: "Messages",
           icon: "envelope",
-          to: "/u/messages",
+          to: "/u2/messages",
         },
         {
           link: "Bookmarks",

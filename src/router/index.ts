@@ -4,6 +4,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Root from "../views/Root.vue";
 import UserLayout from "../layouts/UserLayout.vue";
+import DoubleLayout from "../layouts/DoubleLayout.vue";
 
 Vue.use(VueRouter);
 
@@ -191,6 +192,18 @@ const routes: Array<RouteConfig> = [
               ),
           },
         ],
+      },
+    ],
+  },
+  {
+    path: "/u2",
+    component: DoubleLayout,
+    children: [
+      {
+        path: "messages",
+        name: "messages",
+        component: () =>
+          import(/* webpackChunkName: "messages" */ "../views/Messages.vue"),
       },
     ],
   },

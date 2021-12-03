@@ -32,7 +32,6 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/u",
-    name: "UserLayout",
     component: UserLayout,
     beforeEnter: (to, from, next) => {
       // 1 == 1 ? next() : next("/");
@@ -47,7 +46,6 @@ const routes: Array<RouteConfig> = [
       },
       {
         path: "explore",
-        name: "Explore",
         component: () =>
           import(
             /* webpackChunkName: "explore" */ "../views/Explore/index.vue"
@@ -132,7 +130,6 @@ const routes: Array<RouteConfig> = [
       },
       {
         path: "profile",
-        name: "Profile",
         component: () =>
           import(
             /* webpackChunkName: "profile" */ "../views/Profile/index.vue"
